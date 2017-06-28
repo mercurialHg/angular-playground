@@ -1,0 +1,69 @@
+$applicantNameColor : #4B4F5A
+$applicantObjectiveColor: #7d7d82  
+
+.applicant__name
+    font-weight: 800
+    text-transform: uppercase
+    color: $applicantNameColor
+    margin-top: 10px
+
+.applicant__objective
+    color: $applicantObjectiveColor
+    font-size: 20px
+    padding-right: 30px
+
+
+.face
+    background: #fff
+    display: inline-block
+
+
+//layout
+@media (max-width: 991px)
+    .container
+        background: transparent
+
+
+@media (max-width: 767px)
+    .applicant__image
+        max-width: 300px
+    .applicant__name
+        margin-top: 20px
+        margin-bottom: 16px
+    .applicant__objective
+        padding-right: 20px
+        padding-left: 20px
+        padding-bottom: 10px
+    .block-center-sm
+        margin: 0 auto
+    .text-center-sm
+        text-align: center
+
+@media (max-width: 468px) 
+    .applicant__name
+        margin-top: 20px
+        margin-bottom: 16px
+    .applicant__objective
+        margin-left: -8.3333%
+        margin-right: -8.3333%
+        padding-right: 0
+    .applicant__image
+        max-width: 270px
+    .block-center-xs
+        margin: 0 auto
+    .text-center-xs
+        text-align: center    
+
+//typography
+@media (min-width: 1200px)
+    .null
+        background: transparent
+@media (max-width: 991px)
+    .null
+        background: transparent
+@media (max-width: 767px)
+    .null
+        background: transparent
+@media (max-width: 479px)
+    .null
+        background: transparent

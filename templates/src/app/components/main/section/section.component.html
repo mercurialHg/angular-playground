@@ -1,0 +1,26 @@
+<section class="section {{section.class}}">
+    <!-- section variable loaded in main -->
+    <h2 class="section__title md-card text-uppercase">{{section.title}}</h2>
+    <div class="row section__row">
+        <div 
+            class="col-sm-6 subsection" 
+            *ngFor="let item of section.subsections"  
+            [class.hidden]="section.contacts"
+        > <!-- :not(contacts) -->
+            <h3 class="subsection__title text-center-767max text-center-467max text-uppercase">
+                <span class="subtitle__title-container">{{item.title}} 
+                    <span class="subsection__date" *ngIf="item.date"> {{ "(" + item.date + ")"}} </span>
+                </span>
+            </h3>
+            <h4 class="subsection__subtitle text-center-767max text-center-467max text-uppercase">{{item.subtitle}}</h4>
+            <p class="subsection__description">{{item.description}}</p>
+            
+        </div>
+        <!--contacts only-->
+        <div class="col-sm-6 subsection subsection__contacts" 
+            *ngFor="let subsection of section.subsections"
+            [class.hidden]="!section.contacts">
+            <a class="subsection__contact" *ngFor="let contact of subsection.contacts" href="{{contact?.link}}"> <i class="contact__icon {{contact.icon}}"></i> {{contact.contact}} </a>
+        </div>
+    </div>
+</section>

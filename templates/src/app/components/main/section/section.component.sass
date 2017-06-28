@@ -1,0 +1,138 @@
+
+$sectionTitleBg : #4b4f5a
+$sectionTitleColor : #ffffff
+$sectionBg : #ffffff
+$subsectionTitleColor : #4B4F5B
+$subsectionSubtitleColor : $subsectionTitleColor
+$subsectionDescriptionColor: #94959A   
+$contact-color: #94959A  
+
+.section
+    position: relative
+    margin-bottom: 30px
+    margin-top: 30px
+
+.section__row
+    padding-top: 26px
+    background: $sectionBg
+    padding-left: 50px
+
+.subsection
+    padding-bottom: 20px
+    padding-left: 50px
+
+.subsection:nth-child(3)
+    clear: both
+
+.section__title 
+    margin: 0
+    position: absolute
+    width: 230px
+    height: 35px 
+    top: 0
+    transform: translateY(-60%)
+    line-height: 35px
+    background: $sectionTitleBg
+    color: $sectionTitleColor
+    text-align: center
+    border-radius: 3px
+    font-size: 22px
+
+.subsection__title
+    margin-top: 0
+    margin-bottom: 10px
+
+.subtitle__title-container
+    position: relative
+    &:before 
+        content: " "
+        display: block
+        position: absolute
+        height: 8px
+        width: 8px
+        background: $subsectionSubtitleColor
+        border-radius: 50%
+        top: 50%
+        left: -14px
+        transform: translateY(-55%)
+
+.subsection__subtitle
+    margin-top: 0
+
+.subsection__date 
+    display: inline-block
+    font-size: 12px
+    font-weight: bold
+    color: $subsectionDescriptionColor
+    padding-left: 2px
+    position: absolute
+    top: 50%
+    right: 0
+    transform: translate(100%, -50%)
+
+.subsection__description
+    padding-right: 90px
+    margin: 0
+    color: $subsectionDescriptionColor
+    font-size: 18px
+
+.subsection__contact
+    display: block
+    font-size: 16px
+    text-decoration: none
+    color: darken($contact-color, 20%)
+    transition: color .2s linear
+    &:hover
+        color: darken($contact-color, 80%)
+        transition: color .2s linear
+.contact__icon
+    width: 30px
+    height: 18px
+    vertical-align: middle
+    line-height: 18px
+    font-size: 18px
+
+
+
+@media (max-width: 991px) 
+    .subsection
+        padding-left: 10px
+        padding-bottom: 26px
+    .subsection__description
+        padding-right: 40px
+
+@media (max-width: 767px)
+    .text-center-767max
+        text-align: center
+    .lext-left-767max
+        text-align: left
+    .subsection__description
+        padding: 3px 5px
+        margin: 0 15% 
+        background: #f8f7f7
+        border-radius: 3px
+    .section__row
+        padding-left: 0
+    .section__title
+        left: 50%
+        transform: translate(-50%, -60%)
+    .subtitle__title-container
+        &:before
+            display: none
+    .subsection__contacts
+        padding-bottom: 10px
+    .subsection__contacts:nth-of-type(3)
+        padding-bottom: 0
+    .subsection__contact
+        text-align: center
+        margin-bottom: 10px
+
+
+@media (max-width: 467px)
+    .text-center-467max
+        text-align: center
+    .lext-left-467max
+        text-align: left
+    .subsection__description
+        margin: 0 10px
+        
