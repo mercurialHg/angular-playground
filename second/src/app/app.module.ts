@@ -9,9 +9,8 @@ import { ExperienceComponent } from './components/main/sections/experience/exper
 import { EducationComponent } from './components/main/sections/education/education.component';
 import { LanguagesComponent } from './components/main/sections/languages/languages.component';
 import { SkillsComponent } from './components/main/sections/skills/skills.component';
-import { UdemyComponent } from './udemy/udemy.component';
 
-import {FormsModule} from '@angular/forms'
+
 
 @NgModule({
   declarations: [
@@ -23,11 +22,9 @@ import {FormsModule} from '@angular/forms'
     EducationComponent,
     LanguagesComponent,
     SkillsComponent,
-    UdemyComponent,
   ],
   imports: [
     BrowserModule,
-    FormsModule,
 
   ],
   providers: [],

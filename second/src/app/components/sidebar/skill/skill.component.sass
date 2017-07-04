@@ -1,0 +1,71 @@
+$default-color: #eee
+$selected-color: #000
+.skillbar
+    clear: both
+    padding: 20px 10px
+
+.segment 
+    display: block
+    float: left
+    margin: 0
+    width: 20px
+    height: 2px
+    background: $default-color
+    position: relative
+    z-index: 0
+    &:after
+        content: " "
+        display: block
+        position: absolute
+        background: inherit
+        width: 5px
+        height: 5px
+        top: 50%
+        right: 0
+        transform: translate(50%, -50%)
+        border-radius: 3px
+    &:first-child
+        &:before
+            content: " "
+            display: block
+            position: absolute
+            background: inherit
+            width: 5px
+            height: 5px
+            top: 50%
+            left: 0
+            transform: translate(-50%, -50%)
+            border-radius: 3px
+
+
+.selected-0 
+    &>*
+        background: $default-color   
+.selected-1 
+    &>*:nth-child(-n+1)
+        background: $selected-color
+        z-index: 2
+.selected-2 
+    &>*:nth-child(-n+2)
+        background: $selected-color
+        z-index: 2
+.selected-3 
+    &>*:nth-child(-n+3)
+        background: $selected-color
+        z-index: 2
+.selected-4 
+    &>*:nth-child(-n+4)
+        background: $selected-color
+        z-index: 2
+.selected-5 
+    &>*:nth-child(-n+5)
+        background: $selected-color
+        z-index: 2
+.selected-6 
+    &>*:nth-child(-n+6)
+        background: $selected-color
+        z-index: 2
+.selected-7 
+    &>*:nth-child(-n+7)
+        background: $selected-color
+        z-index: 2
